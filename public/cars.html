@@ -17,26 +17,26 @@
         <div class="container">
             <nav class="navbar fixed-top navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar__brand" href="#hero"></a>
+                    <a class="navbar__brand" href="/#hero"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
                             <li class="nav-item navbar__item">
-                                <a class="nav-link" href="#service">Our Service</a>
+                                <a class="nav-link" href="/#service">Our Service</a>
                             </li>
                             <li class="nav-item navbar__item">
-                                <a class="nav-link" href="#whyus">Why Us</a>
+                                <a class="nav-link" href="/#whyus">Why Us</a>
                             </li>
                             <li class="nav-item navbar__item">
-                                <a class="nav-link" href="#testimonial">Testimonial</a>
+                                <a class="nav-link" href="/#testimonial">Testimonial</a>
                             </li>
                             <li class="nav-item navbar__item">
-                                <a class="nav-link" href="#faq">FAQ</a>
+                                <a class="nav-link" href="/#faq">FAQ</a>
                             </li>
                             <li class="nav-item navbar__item">
-                                <button class="cta" href="#">Register</button>
+                                <button class="cta" href="/#">Register</button>
                             </li>
                         </ul>
                     </div>
@@ -71,33 +71,47 @@
     <!-- Search Car Section -->
 
     <section id="search">
-
-
         <div class="container bg-white shadow-lg rounded-2">
-
             <form>
-                <label for="driver_type">Tipe Driver</label>
-                <select name="driver_type" id="driver_type" required>
-                    <option value="dengansupir">Dengan Sopir</option>
-                    <option value="tanpasupir">Tanpa Sopir (Lepas Kunci)</option>
-                </select>
+                <div class="d-flex justify-content-evenly align-items-center flex-wrap">
+                    <div>
+                        <label class="form-label" for="driver_type">Tipe Driver</label>
+                        <select class="form-control" name="driver_type" id="driver_type" required>
+                            <option value="dengansupir">Dengan Sopir</option>
+                            <option value="tanpasupir">Tanpa Sopir (Lepas Kunci)</option>
+                        </select>
+                    </div>
 
-                <label for="pickup_date">Tanggal</label>
-                <input type="date" name="pickup_date" id="pickup_date" required>
+                    <div>
+                        <label class="form-label" for="pickup_date">Tanggal</label>
+                        <input class="form-control" type="date" name="pickup_date" id="pickup_date" required>
+                    </div>
 
-                <label for="pickup_time">Waktu Jemput/Ambil</label>
-                <input type="time" name="pickup_time" id="pickup_time" required>
+                    <div>
+                        <label class="form-label" for="pickup_time">Waktu Jemput/Ambil</label>
+                        <input class="form-control" type="time" name="pickup_time" id="pickup_time" required>
+                    </div>
 
-                <label for="total_passenger">Jumlah Penumpang (Optional)</label>
-                <input type="number" name="total_passenger" id="total_passenger">
+                    <div>
+                        <label class="form-label" for="total_passenger">Jumlah Penumpang (Optional)</label>
+                        <input class="form-control" type="number" name="total_passenger" id="total_passenger">
+                    </div>
 
-                <button type="submit">Cari Mobil</button>
-                <button id="clear-btn" class="invisible"></button>
+                    <div class="align-self-end">
+                        <button class="cta" type="submit">Cari Mobil</button>
+                    </div>
+                </div>
                 <button id="load-btn" class="invisible">load</button>
+                <button id="clear-btn" class="invisible"></button>
             </form>
+        </div>
+    </section>
+    <!-- End of Search Car -->
 
+    <!-- Search Car Section -->
+    <section id="result">
+        <div class="container bg-white shadow-lg rounded-2 mt-5">
             <div id="cars-container"></div>
-
         </div>
     </section>
     <!-- End of Search Car -->

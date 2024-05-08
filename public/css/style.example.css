@@ -256,5 +256,7 @@ footer {
 }
 
 #search {
-  /* background-color: #ffffff; */
+  position: relative;
+  margin-top: -50px;
+  z-index: 999;
 }
